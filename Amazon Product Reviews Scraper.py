@@ -42,9 +42,9 @@ def Amazon_Scrape():
             for review in reviewsLocation_list: #creates a for loop for all the reviews being scraped on a page
                 reviews_list.append(review.text) #adds each reviews to a list as text
             if(len(numberOfNextClicks_list)>1): #checkes whether a product only has one page of reviews to prevent throwing an error with the next page button
-                nextPageButton = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'a-last'))).click() #clicks on the next page button after all the reviews on each page have been scraped
+                nextPage_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'a-last'))).click() #clicks on the next page button after all the reviews on each page have been scraped
                 time.sleep(2)
-        amazonHomeButton = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'nav-logo-link'))).click() #returns to the Amazon home page after scraping the reviews for each product
+        amazonHome_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, 'nav-logo-link'))).click() #returns to the Amazon home page after scraping the reviews for each product
         time.sleep(2)
 
 Amazon_Scrape() #calls the Amazon_Scrape method
