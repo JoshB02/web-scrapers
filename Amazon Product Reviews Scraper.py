@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jun 12 21:18:33 2020
-
-@author: anite
-"""
-
 from selenium import webdriver                      
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
